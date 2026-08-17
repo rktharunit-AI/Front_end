@@ -1,0 +1,29 @@
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Class Selector */
+.card {
+    background-color: #4CAF50;
+    color: white;
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+}

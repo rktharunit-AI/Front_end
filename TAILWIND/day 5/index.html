@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>AETHER // OBSERVATORY — Planetary Artificial Intelligence Research Environment</title>
+  <meta name="title" content="AETHER // OBSERVATORY — Planetary Artificial Intelligence Research Environment">
+  <meta name="description" content="Navigate verified frontier artificial intelligence through an interactive scientific observatory. Connected orbital universe, 8-axis capability radar, Signal vs Noise dossiers, and the 16-section AI Nexus technology report.">
+  <meta name="keywords" content="AETHER Observatory, AI tools directory, frontier AI models, AI Nexus, ChatGPT o1, Claude 3.5 Sonnet, DeepSeek R1, Grok 3, Cursor, Devin, Manus AI, AI Arena, Signal vs Noise">
+  <meta name="author" content="AETHER Research Council">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aether-observatory.internal/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aether-observatory.internal/">
+  <meta property="og:title" content="AETHER // OBSERVATORY — Planetary AI Research Environment">
+  <meta property="og:description" content="An avant-garde scientific observatory for exploring, comparing, and mastering verified frontier AI systems and autonomous agent swarms.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300f2fe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/><path d='M2 12h20'/></svg>">
+
+  <!-- Google Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration for AETHER Observatory -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: {
+              base: '#020408',
+              void: '#05080f',
+              surface: '#0a0f1c',
+              elevated: '#10172a',
+              cyan: '#00f2fe',
+              blue: '#3b82f6',
+              purple: '#8b5cf6',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              magenta: '#ec4899'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Master Scientific Design System Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://aether-observatory.internal/#website",
+        "url": "https://aether-observatory.internal/",
+        "name": "AETHER Observatory",
+        "description": "Planetary Artificial Intelligence Observatory and Research Intelligence System"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#020408] text-slate-100 font-sans selection:bg-[#00f2fe]/20 selection:text-[#00f2fe]">
+
+  <!-- Hardware Precision Cursor -->
+  <div id="aether-cursor-dot" class="aether-cursor-dot"></div>
+  <div id="aether-cursor-ring" class="aether-cursor-ring">
+    <span id="aether-cursor-label" class="aether-cursor-label">EXPLORE</span>
+  </div>
+
+  <!-- Living Intelligence Field & Scientific Grid Textures -->
+  <canvas id="neural-canvas"></canvas>
+  <div class="observatory-grid-texture"></div>
+  <div class="scanline-layer"></div>
+
+  <!-- Tactical Toast Notifications -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-[99999] flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ==========================================================================
+       FLOATING SCIENTIFIC NAVIGATION HUD
+       ========================================================================== -->
+  <header class="floating-hud-nav" role="navigation">
+    
+    <!-- Monogram & Status -->
+    <div class="flex items-center gap-3">
+      <a href="#" class="flex items-center gap-2 group" data-cursor="OBSERVATORY">
+        <div class="w-6 h-6 rounded-sm bg-[#0a0f1c] border border-[#00f2fe]/50 flex items-center justify-center text-[#00f2fe]">
+          <i data-lucide="orbit" class="w-3.5 h-3.5"></i>
+        </div>
+        <div class="font-syne font-extrabold text-xs tracking-wider text-white">
+          AETHER <span class="text-[#00f2fe]">//</span> OBSERVATORY
+        </div>
+      </a>
+      <div class="hidden sm:flex items-center gap-1.5 pl-3 border-l border-white/10 font-mono text-[9px] text-[#10b981]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-ping"></span>
+        <span>STATUS ● ONLINE</span>
+      </div>
+    </div>
+
+    <!-- Scientific Coordinate Jumps -->
+    <nav class="hidden lg:flex items-center gap-1">
+      <a href="#hero" class="hud-link" data-cursor="HERO">[01] DISCOVER</a>
+      <a href="#ai-universe" class="hud-link" data-cursor="UNIVERSE">[02] UNIVERSE</a>
+      <a href="#specimen-archive" class="hud-link" data-cursor="SPECIMENS">[03] SPECIMENS</a>
+      <a href="#ai-arena" class="hud-link" data-cursor="ARENA">[04] ARENA</a>
+      <a href="#ai-nexus-article" class="hud-link text-[#00f2fe]" data-cursor="ARTICLE">[05] AI NEXUS</a>
+      <a href="#evolution-museum" class="hud-link" data-cursor="TIMELINE">[06] TIMELINE</a>
+    </nav>
+
+    <!-- Tactical HUD Controls -->
+    <div class="flex items-center gap-2">
+      <button id="cmd-palette-btn" class="flex items-center gap-1.5 px-2 py-1 rounded bg-[#0a0f1c] border border-white/10 hover:border-[#00f2fe]/40 text-slate-300 font-mono text-[10px] transition-all" data-cursor="COMMAND" title="Search Intelligence (Ctrl+K)">
+        <i data-lucide="terminal" class="w-3 h-3 text-[#00f2fe]"></i>
+        <span class="hidden sm:inline text-slate-400">SEARCH</span>
+        <kbd class="px-1 rounded bg-white/5 text-[8px] text-[#00f2fe]">^K</kbd>
+      </button>
+
+      <button id="sound-toggle-btn" class="w-7 h-7 rounded bg-[#0a0f1c] border border-white/10 hover:border-[#00f2fe]/40 flex items-center justify-center text-slate-300 hover:text-[#00f2fe] transition-all" data-cursor="AUDIO" title="Toggle Acoustic UI Feedback">
+        <i data-lucide="volume-2" id="sound-icon" class="w-3 h-3 text-[#00f2fe]"></i>
+      </button>
+
+      <button id="bookmarks-trigger-btn" class="relative w-7 h-7 rounded bg-[#0a0f1c] border border-white/10 hover:border-[#00f2fe]/40 flex items-center justify-center text-slate-300 hover:text-[#00f2fe] transition-all" data-cursor="PINNED" title="View Pinned Intelligence">
+        <i data-lucide="bookmark" class="w-3 h-3"></i>
+        <span id="bookmarks-count-badge" class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#00f2fe] text-black font-mono text-[8px] font-bold flex items-center justify-center">3</span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION — ASYMMETRIC SCIENTIFIC INSTRUMENT & MONUMENTAL GRAPHIC TYPE
+       ========================================================================== -->
+  <section id="hero" class="relative min-h-[96vh] pt-32 pb-16 px-4 sm:px-6 lg:px-8 flex items-center z-10">
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Left Column: Raw Typography as Primary Graphic Element (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Technical Label Annotation -->
+        <div class="space-y-1 font-mono text-xs text-[#00f2fe] tracking-widest uppercase">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00f2fe] animate-pulse"></span>
+            <span>AETHER // OBSERVATORY — INTELLIGENCE INDEX 01</span>
+          </div>
+          <div class="text-[10px] text-slate-500">SIGNAL DETECTED // 19 VERIFIED FRONTIER ARCHITECTURES</div>
+        </div>
+
+        <!-- Monumental Display Headline -->
+        <h1 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.88] text-white">
+          INTELLIGENCE<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2fe] via-[#8b5cf6] to-[#ec4899]">HAS BECOME</span><br>
+          NAVIGABLE.
+        </h1>
+
+        <!-- Editorial Description -->
+        <p class="text-slate-300 font-sans text-base sm:text-lg max-w-xl leading-relaxed">
+          A planetary digital observatory cataloging verified frontier artificial intelligence architectures, reasoning engines, and autonomous agent swarms.
+        </p>
+
+        <!-- Live Telemetry Coordinates -->
+        <div class="grid grid-cols-3 gap-4 pt-2 max-w-lg border-y border-white/10 py-4 font-mono text-xs">
+          <div>
+            <div class="text-slate-500 text-[9px] uppercase tracking-wider">Signals Indexed</div>
+            <div class="text-white font-bold text-base mt-0.5 flex items-center gap-1.5">
+              <span>19</span>
+              <span class="text-[#10b981] text-[9px]">● VERIFIED</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-slate-500 text-[9px] uppercase tracking-wider">Epoch Cycle</div>
+            <div class="text-white font-bold text-base mt-0.5">2026.02</div>
+          </div>
+          <div>
+            <div class="text-slate-500 text-[9px] uppercase tracking-wider">Domain Orbits</div>
+            <div class="text-white font-bold text-base mt-0.5 text-[#00f2fe]">09 NODES</div>
+          </div>
+        </div>
+
+        <!-- Primary Action Triggers -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#ai-universe" class="px-6 py-3.5 rounded-sm bg-[#00f2fe] text-black font-mono font-bold text-xs uppercase tracking-widest hover:bg-white hover:shadow-[0_0_30px_rgba(0,242,254,0.6)] transition-all flex items-center gap-2" data-cursor="ENTER">
+            <span>ENTER AI UNIVERSE</span>
+            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#ai-nexus-article" class="px-6 py-3.5 rounded-sm bg-[#0a0f1c] border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-[#00f2fe] hover:text-[#00f2fe] transition-all flex items-center gap-2" data-cursor="REPORT">
+            <span>READ AI NEXUS REPORT</span>
+            <i data-lucide="book-open" class="w-4 h-4 text-[#00f2fe]"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive INTELLIGENCE CORE Scientific Instrument (5 cols) -->
+      <div class="lg:col-span-5 flex items-center justify-center relative">
+        
+        <!-- Technical HUD Annotations around core -->
+        <div class="absolute -top-6 left-4 font-mono text-[9px] text-[#00f2fe] tracking-widest border-l-2 border-[#00f2fe] pl-2 opacity-80">
+          <div>CORE // REACTION CHAMBER</div>
+          <div class="text-slate-400">SPECTRUM: 0.9998 RMS</div>
+        </div>
+
+        <div class="absolute -bottom-6 right-4 font-mono text-[9px] text-[#8b5cf6] tracking-widest text-right border-r-2 border-[#8b5cf6] pr-2 opacity-80">
+          <div>FIELD // STABLE 432.8 THz</div>
+          <div class="text-slate-400">LATENCY // 1.2ms COGNITIVE</div>
+        </div>
+
+        <!-- The Scientific Instrument Gyroscope Viewport -->
+        <div class="aether-core-viewport">
+          <div class="core-orbit-ring core-ring-1">
+            <div class="core-satellite-node" style="top: 12%; left: 82%;">
+              <span class="core-satellite-tag">NODE // 01 REASONING</span>
+            </div>
+          </div>
+          <div class="core-orbit-ring core-ring-2">
+            <div class="core-satellite-node" style="top: 80%; left: 18%;">
+              <span class="core-satellite-tag">NODE // 02 AGENTS</span>
+            </div>
+          </div>
+          <div class="core-orbit-ring core-ring-3">
+            <div class="core-satellite-node" style="top: 25%; left: 15%;">
+              <span class="core-satellite-tag">NODE // 03 CODE</span>
+            </div>
+          </div>
+          <div class="core-orbit-ring core-ring-4"></div>
+          
+          <!-- Central Pulsing Energy Nucleus -->
+          <div class="core-energy-nucleus" data-cursor="AETHER CORE">
+            <i data-lucide="orbit" class="w-9 h-9 text-white animate-spin" style="animation-duration: 22s;"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 01: AI UNIVERSE — CONNECTED ORBITAL ECOSYSTEM
+       ========================================================================== -->
+  <section id="ai-universe" class="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10 z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="font-mono text-xs text-[#00f2fe] tracking-widest uppercase mb-2">
+            SECTION // 01 — CELESTIAL ORBITAL GRAPH
+          </div>
+          <h2 class="font-syne font-bold text-4xl sm:text-5xl text-white tracking-tight">
+            THE AI UNIVERSE
+          </h2>
+        </div>
+        <p class="text-slate-400 font-sans text-sm max-w-md">
+          Explore artificial intelligence as an interconnected orbital ecosystem. Hover an orbit to illuminate connected systems; click to focus intelligence.
+        </p>
+      </div>
+
+      <!-- Orbital Ecosystem Stage -->
+      <div id="universe-stage" class="universe-stage relative flex items-center justify-center">
+        
+        <!-- SVG Radial Ring Lines -->
+        <svg class="universe-svg-layer" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+          <circle cx="400" cy="300" r="100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+          <circle cx="400" cy="300" r="170" fill="none" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1" />
+          <circle cx="400" cy="300" r="220" fill="none" stroke="rgba(139, 92, 246, 0.15)" stroke-width="1" stroke-dasharray="6 4" />
+          <circle cx="400" cy="300" r="260" fill="none" stroke="rgba(16, 185, 129, 0.12)" stroke-width="1" />
+          <!-- Crosshair coordinate lines -->
+          <line x1="0" y1="300" x2="800" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+          <line x1="400" y1="0" x2="400" y2="600" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+        </svg>
+
+        <!-- Central Sun: AETHER HUB -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 pointer-events-none">
+          <div class="w-16 h-16 rounded-full bg-[#020408] border border-[#00f2fe] shadow-[0_0_35px_rgba(0,242,254,0.5)] flex items-center justify-center mx-auto text-[#00f2fe]">
+            <i data-lucide="globe" class="w-7 h-7"></i>
+          </div>
+          <div class="font-mono text-[9px] text-[#00f2fe] tracking-widest mt-1.5 uppercase">AETHER NEXUS</div>
+        </div>
+
+        <!-- Render Container for 9 Interactive Orbital Nodes -->
+        <div id="universe-nodes-container" class="absolute inset-0"></div>
+
+        <!-- Floating HUD Intel Panel (Appears on node hover) -->
+        <div id="universe-hud-panel" class="absolute bottom-6 right-6 p-4 rounded-sm bg-[#0a0f1c]/90 border border-[#00f2fe]/40 backdrop-blur-md max-w-xs opacity-0 pointer-events-none transition-all duration-300 z-30">
+          <div id="hud-node-code" class="font-mono text-[9px] text-[#00f2fe] tracking-widest uppercase">NODE // 01</div>
+          <div id="hud-node-title" class="font-syne font-bold text-base text-white mt-0.5">General Intelligence & LLMs</div>
+          <div id="hud-node-desc" class="text-xs text-slate-300 mt-1 leading-relaxed">Multimodal frontier foundations and chain-of-thought reasoners.</div>
+          <div class="mt-3 pt-2 border-t border-white/10 flex items-center justify-between font-mono text-[10px] text-slate-400">
+            <span>CONNECTED SYSTEMS:</span>
+            <span id="hud-node-count" class="text-[#00f2fe] font-bold">5 VERIFIED</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 02: "WHAT ARE YOU TRYING TO ACCOMPLISH?" INTENT VECTOR MATRIX
+       ========================================================================== -->
+  <section id="intent-matrix" class="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-[#05080f] z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="font-mono text-xs text-[#00f2fe] tracking-widest uppercase mb-2">
+          SECTION // 02 — INTENT VECTOR MATRIX
+        </div>
+        <h2 class="font-syne font-bold text-3xl sm:text-5xl text-white tracking-tight">
+          WHAT ARE YOU TRYING TO ACCOMPLISH?
+        </h2>
+        <p class="text-slate-400 font-sans text-sm mt-3">
+          Select an operational objective. The observatory dynamically re-maps and highlights matching intelligence nodes.
+        </p>
+      </div>
+
+      <!-- Intent Action Buttons (Vector Chips) -->
+      <div id="intent-chips-container" class="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto"></div>
+
+      <!-- Active Intent Telemetry Banner -->
+      <div id="active-intent-banner" class="mt-8 p-4 bg-[#0a0f1c] border border-white/10 max-w-2xl mx-auto flex items-center justify-between font-mono text-xs text-slate-300">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#00f2fe] animate-pulse"></span>
+          <span>ACTIVE INTENT: <strong id="active-intent-name" class="text-[#00f2fe]">ALL INTELLIGENCE</strong></span>
+        </div>
+        <div class="text-slate-400 text-[11px]">
+          <span id="active-intent-count">19</span> SYSTEMS ALIGNED
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 03: INTELLIGENCE SPECIMEN ARCHIVE & CAPABILITY CONSTELLATIONS
+       ========================================================================== -->
+  <section id="specimen-archive" class="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10 z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header & Controls -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+        <div>
+          <div class="font-mono text-xs text-[#00f2fe] tracking-widest uppercase mb-2">
+            SECTION // 03 — INTELLIGENCE SPECIMEN ARCHIVE
+          </div>
+          <h2 class="font-syne font-bold text-4xl sm:text-5xl text-white tracking-tight">
+            VERIFIED COGNITIVE SYSTEMS
+          </h2>
+        </div>
+
+        <!-- Filter, Sort & Format View Switcher -->
+        <div class="flex flex-wrap items-center gap-3">
+          
+          <!-- Search Input -->
+          <div class="relative min-w-[220px]">
+            <i data-lucide="search" class="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input type="text" id="specimen-search-input" placeholder="SEARCH SPECIMENS..." class="w-full pl-9 pr-4 py-2 bg-[#0a0f1c] border border-white/10 focus:border-[#00f2fe] rounded-sm text-xs font-mono text-white placeholder-slate-500 focus:outline-none transition-all">
+          </div>
+
+          <!-- Sort Selector -->
+          <select id="specimen-sort-select" class="px-3 py-2 bg-[#0a0f1c] border border-white/10 focus:border-[#00f2fe] rounded-sm text-xs font-mono text-slate-300 focus:outline-none transition-all cursor-pointer">
+            <option value="capability">SORT: REASONING CAPABILITY</option>
+            <option value="coding">SORT: CODING VECTOR</option>
+            <option value="context">SORT: CONTEXT WINDOW</option>
+            <option value="alphabetical">SORT: ALPHABETICAL</option>
+          </select>
+
+          <!-- Format Switcher: Specimen Cards vs Tactical Table -->
+          <div class="flex items-center border border-white/10 bg-[#0a0f1c] rounded-sm p-0.5">
+            <button id="view-mode-grid-btn" class="px-2.5 py-1 text-xs font-mono text-[#00f2fe] bg-white/5 rounded-sm" title="Specimen Grid View">
+              <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+            </button>
+            <button id="view-mode-table-btn" class="px-2.5 py-1 text-xs font-mono text-slate-400 hover:text-white rounded-sm" title="Tactical Matrix Table View">
+              <i data-lucide="list" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Specimen Container (Grid or Table) -->
+      <div id="specimen-render-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <!-- Empty State -->
+      <div id="specimen-empty-state" class="hidden text-center py-20 border border-dashed border-white/10 p-8">
+        <i data-lucide="compass" class="w-12 h-12 text-[#00f2fe] mx-auto mb-4 opacity-50"></i>
+        <div class="font-syne font-bold text-xl text-white">NO ALIGNED SIGNALS DETECTED</div>
+        <p class="text-sm text-slate-400 font-mono mt-1">Adjust search query or select a different operational vector.</p>
+        <button id="specimen-reset-btn" class="mt-4 px-4 py-2 bg-[#00f2fe]/10 border border-[#00f2fe] text-[#00f2fe] font-mono text-xs hover:bg-[#00f2fe] hover:text-black transition-all">
+          RESET OBSERVATORY FILTERS
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 04: AI ARENA — LABORATORY BENCHMARK RADAR
+       ========================================================================== -->
+  <section id="ai-arena" class="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-[#05080f] z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="font-mono text-xs text-[#8b5cf6] tracking-widest uppercase mb-2">
+          SECTION // 04 — EXPERIMENTAL LABORATORY
+        </div>
+        <h2 class="font-syne font-bold text-3xl sm:text-5xl text-white tracking-tight">
+          AI ARENA // 8-AXIS RADAR COMPARISON
+        </h2>
+        <p class="text-slate-400 font-sans text-sm mt-3">
+          Subject two frontier systems to simultaneous multi-dimensional capability vector analysis and architectural deconstruction.
+        </p>
+      </div>
+
+      <!-- Laboratory Station -->
+      <div class="arena-lab-station rounded-sm">
+        
+        <!-- System Selectors Bar with Diverging Rays -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center mb-10 pb-8 border-b border-white/10">
+          
+          <!-- System A (Alpha) -->
+          <div class="md:col-span-5 space-y-2">
+            <div class="font-mono text-[10px] text-[#00f2fe] uppercase tracking-widest flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#00f2fe]"></span>
+              <span>SYSTEM ALPHA // VECTOR A</span>
+            </div>
+            <select id="arena-select-a" class="w-full px-4 py-3 bg-[#0a0f1c] border border-[#00f2fe]/40 rounded-sm font-syne font-bold text-lg text-white focus:outline-none cursor-pointer"></select>
+          </div>
+
+          <!-- Central Converging Node -->
+          <div class="md:col-span-2 text-center">
+            <div class="w-12 h-12 rounded-full bg-[#020408] border border-white/20 mx-auto flex items-center justify-center font-syne font-extrabold text-sm text-[#00f2fe] shadow-[0_0_20px_rgba(0,242,254,0.2)]">
+              VS
+            </div>
+          </div>
+
+          <!-- System B (Beta) -->
+          <div class="md:col-span-5 space-y-2 text-left md:text-right">
+            <div class="font-mono text-[10px] text-[#8b5cf6] uppercase tracking-widest flex items-center gap-2 justify-start md:justify-end">
+              <span>SYSTEM BETA // VECTOR B</span>
+              <span class="w-2 h-2 rounded-full bg-[#8b5cf6]"></span>
+            </div>
+            <select id="arena-select-b" class="w-full px-4 py-3 bg-[#0a0f1c] border border-[#8b5cf6]/40 rounded-sm font-syne font-bold text-lg text-white focus:outline-none cursor-pointer text-left md:text-right"></select>
+          </div>
+
+        </div>
+
+        <!-- Visual 8-Axis Radar Chart & Capability Bars -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left: 8-Axis SVG Radar Polygon (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col items-center justify-center">
+            <div class="arena-radar-box">
+              <svg id="arena-radar-svg" class="w-full h-full" viewBox="0 0 380 380"></svg>
+            </div>
+            <div class="flex items-center gap-6 font-mono text-xs mt-4">
+              <div class="flex items-center gap-2 text-[#00f2fe]">
+                <span class="w-3 h-3 rounded-full bg-[#00f2fe]"></span>
+                <span id="arena-legend-a">SYSTEM ALPHA</span>
+              </div>
+              <div class="flex items-center gap-2 text-[#8b5cf6]">
+                <span class="w-3 h-3 rounded-full bg-[#8b5cf6]"></span>
+                <span id="arena-legend-b">SYSTEM BETA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Comparative Dimension Bars (7 cols) -->
+          <div class="lg:col-span-7 space-y-4" id="arena-capability-bars-container"></div>
+
+        </div>
+
+        <!-- Head-to-Head Signal vs Noise Breakdown -->
+        <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div id="arena-dossier-a" class="space-y-4 p-6 bg-[#0a0f1c] border border-[#00f2fe]/20 rounded-sm"></div>
+          <div id="arena-dossier-b" class="space-y-4 p-6 bg-[#0a0f1c] border border-[#8b5cf6]/20 rounded-sm"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 05: "AI NEXUS" TECHNOLOGY MAGAZINE (16 COMPLETE SECTIONS)
+       ========================================================================== -->
+  <section id="ai-nexus-article" class="relative py-28 px-4 sm:px-6 lg:px-8 border-t border-white/10 z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Magazine Hero Block -->
+      <div class="magazine-header-block">
+        <div class="flex items-center justify-between font-mono text-xs text-[#ec4899] mb-4">
+          <span>AETHER RESEARCH COUNCIL DISPATCH // SPECIAL ISSUE</span>
+          <span>16-PART ARCHITECTURAL STUDY</span>
+        </div>
+        <h2 class="font-syne font-extrabold text-5xl sm:text-7xl lg:text-8xl text-white tracking-tight leading-[0.9]">
+          AI NEXUS
+        </h2>
+        <div class="font-syne font-bold text-xl sm:text-2xl text-[#00f2fe] mt-3">
+          UNDERSTANDING THE MACHINES THAT ARE CHANGING HOW WE THINK
+        </div>
+        <p class="text-slate-300 font-sans text-base sm:text-lg max-w-3xl mt-4 leading-relaxed">
+          An exhaustive, publication-grade investigation into foundational neural architectures, generative diffusion algorithms, autonomous agent loops, and the future of synthetic reasoning.
+        </p>
+      </div>
+
+      <!-- INTERACTIVE HOW AI WORKS VISUAL PIPELINE -->
+      <div class="mb-20">
+        <div class="font-mono text-xs text-[#00f2fe] tracking-widest uppercase mb-3 flex items-center gap-2">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          <span>INTERACTIVE VISUAL PIPELINE // HOW ARTIFICIAL INTELLIGENCE WORKS</span>
+        </div>
+        
+        <div class="pipeline-stepper-box">
+          
+          <!-- Stepper Tab Buttons -->
+          <div id="pipeline-steps-nav" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-6"></div>
+
+          <!-- Active Step Telemetry Display -->
+          <div id="pipeline-step-display" class="p-6 bg-[#05080f] border border-white/10 rounded-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"></div>
+
+        </div>
+      </div>
+
+      <!-- 16 COMPLETE ARTICLE SECTIONS RENDER CONTAINER -->
+      <div id="article-sections-container" class="space-y-2"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 06: MUSEUM EVOLUTION TIMELINE (1950 -> 2026+)
+       ========================================================================== -->
+  <section id="evolution-museum" class="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-[#05080f] z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="font-mono text-xs text-[#00f2fe] tracking-widest uppercase mb-2">
+            SECTION // 06 — HISTORICAL CONTINUUM
+          </div>
+          <h2 class="font-syne font-bold text-4xl sm:text-5xl text-white tracking-tight">
+            AI EVOLUTION TIMELINE
+          </h2>
+        </div>
+        <p class="text-slate-400 font-sans text-sm max-w-md">
+          From Alan Turing's mathematical conjectures to autonomous multi-agent consensus swarms — the seven defining epochs of machine intelligence.
+        </p>
+      </div>
+
+      <!-- Horizontal Museum Timeline Track -->
+      <div id="museum-timeline-container" class="museum-timeline-track"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 07: THE FUTURE SYSTEM (PARADIGM EVOLUTION)
+       ========================================================================== -->
+  <section id="future-systems" class="relative py-24 px-4 sm:px-6 lg:px-8 border-t border-white/10 z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="mb-14">
+        <div class="font-mono text-xs text-[#ec4899] tracking-widest uppercase mb-2">
+          SECTION // 07 — THE PARADIGM SHIFT
+        </div>
+        <h2 class="font-syne font-bold text-4xl sm:text-6xl text-white tracking-tight">
+          FROM TOOLS<br>
+          → TO AGENTS<br>
+          → TO SYSTEMS
+        </h2>
+        <p class="text-slate-400 font-sans text-base max-w-xl mt-4">
+          The structural evolution of synthetic cognitive labor — each stage progressively subsumes the previous paradigm.
+        </p>
+      </div>
+
+      <!-- 5 Stages Grid -->
+      <div id="future-stages-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       OBSERVATORY FOOTER
+       ========================================================================== -->
+  <footer class="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-[#020408] z-10 font-mono text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <div class="md:col-span-6 space-y-2">
+        <div class="font-syne font-bold text-lg text-white">
+          AETHER <span class="text-[#00f2fe]">//</span> OBSERVATORY
+        </div>
+        <p class="text-slate-500 max-w-md">
+          Frontier artificial intelligence research observatory and planetary cognitive radar. All specifications verified against official releases.
+        </p>
+      </div>
+
+      <div class="md:col-span-6 flex flex-col md:items-end space-y-2 text-slate-400">
+        <div>SYSTEM // AETHER-OS-v3.2</div>
+        <div class="text-[11px] text-slate-500">
+          CALIBRATED FOR FRONTIER COGNITIVE DISCOVERY
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CLASSIFIED DOSSIER MODAL (TOOL PROFILE)
+       ========================================================================== -->
+  <div id="dossier-modal-backdrop" class="dossier-modal-backdrop">
+    <div class="dossier-modal-container rounded-sm p-6 sm:p-10 relative">
+      
+      <!-- Close Button -->
+      <button id="dossier-close-btn" class="absolute top-6 right-6 w-9 h-9 rounded bg-[#0a0f1c] border border-white/10 hover:border-[#00f2fe] text-slate-400 hover:text-white flex items-center justify-center transition-all" data-cursor="CLOSE">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Dossier Dynamic Content Container -->
+      <div id="dossier-modal-content"></div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AETHER COMMAND PALETTE MODAL (CTRL + K / '/')
+       ========================================================================== -->
+  <div id="command-palette-backdrop" class="command-backdrop">
+    <div class="command-window rounded-sm overflow-hidden flex flex-col max-h-[80vh]">
+      
+      <!-- Search Input Bar -->
+      <div class="p-4 border-b border-white/10 flex items-center gap-3 bg-[#0a0f1c]">
+        <i data-lucide="terminal" class="w-5 h-5 text-[#00f2fe]"></i>
+        <input type="text" id="command-input" placeholder="Search systems, intents, arena comparisons, or AI Nexus chapters..." class="w-full bg-transparent text-white font-mono text-sm focus:outline-none placeholder-slate-500" autocomplete="off">
+        <kbd class="px-2 py-1 bg-white/5 border border-white/10 rounded font-mono text-[10px] text-slate-400">ESC</kbd>
+      </div>
+
+      <!-- Search Results List -->
+      <div id="command-results-list" class="overflow-y-auto p-3 space-y-1 font-mono text-xs"></div>
+
+      <!-- Command Footer -->
+      <div class="p-3 border-t border-white/10 bg-[#05080f] flex items-center justify-between text-[10px] font-mono text-slate-500">
+        <div class="flex items-center gap-3">
+          <span><strong class="text-white">↑↓</strong> Navigate</span>
+          <span><strong class="text-white">ENTER</strong> Execute</span>
+        </div>
+        <span>AETHER OS // v3.2</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       BOOKMARKS DRAWER (SLIDE-OVER)
+       ========================================================================== -->
+  <div id="bookmarks-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-[#0a0f1c] border-l border-white/10 z-[10001] translate-x-full transition-transform duration-300 p-6 flex flex-col">
+    
+    <div class="flex items-center justify-between pb-4 border-b border-white/10">
+      <div class="font-syne font-bold text-lg text-white flex items-center gap-2">
+        <i data-lucide="bookmark" class="w-4 h-4 text-[#00f2fe]"></i>
+        <span>PINNED SYSTEMS</span>
+      </div>
+      <button id="bookmarks-close-btn" class="w-8 h-8 rounded bg-[#020408] border border-white/10 text-slate-400 hover:text-white flex items-center justify-center">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Pinned Items Container -->
+    <div id="bookmarks-list-container" class="flex-1 overflow-y-auto py-4 space-y-3"></div>
+
+    <div class="pt-4 border-t border-white/10">
+      <button id="bookmarks-clear-btn" class="w-full py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded text-xs font-mono text-slate-400 hover:text-white transition-all">
+        CLEAR ALL PINNED
+      </button>
+    </div>
+
+  </div>
+  <div id="bookmarks-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[10000] hidden"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
