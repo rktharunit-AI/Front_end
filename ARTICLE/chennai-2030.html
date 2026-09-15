@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHENNAI 2030 // THE NEXT INTERNET — Page 03</title>
+  <meta name="description" content="An architectural planning case study examining the deep integration of ambient Information Technology into Chennai's civil, geographic, and industrial fabric.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Subtle Architectural Grid Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-radial-gradient"></div>
+
+  <!-- Custom Architectural Crosshair Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Editorial Navigation Bar -->
+  <header class="global-header">
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <div class="brand-symbol"></div>
+        <div class="brand-text">
+          <span class="brand-title">THE NEXT INTERNET</span>
+          <span class="brand-meta">FUTURE SYSTEMS EXHIBITION // 2030</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><span class="nav-num">01</span> IT IN 2030</a></li>
+        <li><a href="without-it.html" class="nav-link"><span class="nav-num">02</span> WITHOUT IT</a></li>
+        <li><a href="chennai-2030.html" class="nav-link active"><span class="nav-num">03</span> CHENNAI 2030</a></li>
+      </ul>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <button class="btn-presentation" id="btnPresentation" title="Toggle Judge Presentation Mode (P)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>PRESENTATION</span>
+          <span class="key-hint">P</span>
+        </button>
+
+        <button class="btn-audio" id="btnAudio" title="Toggle Acoustic Feedback"></button>
+
+        <a href="index.html" class="btn-explore">
+          <span>START OVER</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link"><span class="nav-num">01</span> IT IN 2030</a>
+    <a href="without-it.html" class="nav-link"><span class="nav-num">02</span> WITHOUT IT</a>
+    <a href="chennai-2030.html" class="nav-link active"><span class="nav-num">03</span> CHENNAI 2030</a>
+  </div>
+
+  <!-- Telemetry Strip -->
+  <div class="hud-telemetry">
+    <div class="hud-item">
+      <span class="pulse-dot"></span>
+      <span>URBAN CARTOGRAPHY: CHENNAI REGIONAL SPECIFICATION</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>COASTAL LATITUDE: 13.0827° N, 80.2707° E</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>GRID NODES: 11 ARCHITECTURAL DOMAINS</span>
+    </div>
+    <div class="hud-item">
+      <span>CHAPTER: 03 // DEPLOYMENT</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- ====================================================================
+           1. HERO: CHENNAI 2030 & MANDATORY ARCHITECTURAL DISCLAIMER
+           ==================================================================== -->
+      <section class="hero-scene" style="min-height: auto; padding: 4.5rem 0 2.5rem;">
+        
+        <!-- Mandatory Conceptual Scenario Disclaimer -->
+        <div class="concept-badge">
+          CONCEPTUAL FUTURE SCENARIO — NOT AN OFFICIAL PREDICTION
+        </div>
+
+        <span class="label-tag">03 / URBAN DEPLOYMENT BLUEPRINT</span>
+        
+        <div class="hero-title-group">
+          <span class="hero-title-line">CHENNAI</span>
+          <span class="hero-title-oversized">2030</span>
+        </div>
+        
+        <p class="hero-editorial-lead">
+          “Imagine advanced Information Technology becoming deeply integrated into Chennai. 
+          <strong>What happens when a coastal metropolis embeds ambient intelligence into its rivers, power grids, industrial corridors, and public healthcare?</strong>”
+        </p>
+
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary); max-width: 820px; line-height: 1.65; border-top: 1px solid var(--border-medium); padding-top: 1.25rem;">
+          This architectural inquiry applies real computational models to Chennai's unique geography — from seasonal Adyar/Cooum stormwater runoff and coastal seawater desalination grids to the high-throughput automotive manufacturing belts of Sriperumbudur and Oragadam.
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           2. SECTION: CHENNAI FUTURE MAP (ARCHITECTURAL CARTOGRAPHY)
+           ==================================================================== -->
+      <section>
+        <div class="section-header">
+          <div class="section-num">URBAN CARTOGRAPHY // 11 CIVIC & INDUSTRIAL DOMAINS</div>
+          <h2 class="section-title">THE CONNECTED METROPOLIS</h2>
+          <p class="section-desc">
+            An architectural planning map of metropolitan Chennai. Click any domain to trace its operational pipeline: from sensory data capture to edge computing, neural models, policy decision, and closed-loop actuation.
+          </p>
+        </div>
+
+        <div class="chennai-grid-layout">
+          
+          <!-- Domain Selector -->
+          <div class="chennai-map-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-medium); padding-bottom: 0.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-primary); letter-spacing: 0.06em;">METROPOLITAN SYSTEMS</span>
+              <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--cobalt-primary);">SELECT SYSTEM</span>
+            </div>
+
+            <div class="chennai-zones-list" id="chennaiZonesList">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Pipeline Inspector (INPUT -> DATA -> EDGE/CLOUD -> AI -> DECISION -> ACTION) -->
+          <div class="zone-inspector-panel">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem;" id="zoneInspectorTitle">Flood Prediction</h3>
+                <div style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; color: var(--cobalt-primary);" id="zoneInspectorLocation">// LOCATION: ADYAR & CHEMBERAMBAKKAM</div>
+              </div>
+              <span class="class-tag class-emerging">CYBER-PHYSICAL</span>
+            </div>
+
+            <div class="zone-pipeline-flow">
+              
+              <!-- 1. Input -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">01 // INPUT</div>
+                <div class="flow-step-detail" id="flowInput">Sensors and physical data capture endpoints.</div>
+              </div>
+
+              <!-- 2. Data -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">02 // DATA</div>
+                <div class="flow-step-detail" id="flowData">Ingestion protocols and telemetry pipes.</div>
+              </div>
+
+              <!-- 3. Edge / Cloud -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">03 // COMPUTE</div>
+                <div class="flow-step-detail" id="flowEdgeCloud">Processing topology between edge nodes and cloud clusters.</div>
+              </div>
+
+              <!-- 4. AI -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">04 // AI MODEL</div>
+                <div class="flow-step-detail" id="flowAI">Inference algorithms and physics-informed models.</div>
+              </div>
+
+              <!-- 5. Decision -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">05 // DECISION</div>
+                <div class="flow-step-detail" id="flowDecision">Policy gating and safety criteria thresholding.</div>
+              </div>
+
+              <!-- 6. Action -->
+              <div class="flow-step-row">
+                <div class="flow-step-type">06 // ACTION</div>
+                <div class="flow-step-detail" id="flowAction">Physical actuation and closed-loop civic response.</div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           3. SECTION: "BUILD CHENNAI 2030" (ARCHITECTURAL CITY BUILDER)
+           ==================================================================== -->
+      <section>
+        <div class="section-header">
+          <div class="section-num">MUNICIPAL MESH LAB // 9 SUBSYSTEMS</div>
+          <h2 class="section-title">BUILD CHENNAI 2030</h2>
+          <p class="section-desc">
+            Activate municipal subsystems to observe how their interconnection creates a self-healing urban fabric. The architectural planning canvas renders data routing along the Bay of Bengal coastline, computing live aggregate resilience.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: start;">
+          
+          <!-- System Toggles -->
+          <div class="engine-sidebar">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; letter-spacing: 0.06em;">
+              URBAN SUBSYSTEM SWITCHES
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="traffic">
+                <span class="pillar-name" style="font-size: 0.88rem;">Smart Traffic Network</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="flood">
+                <span class="pillar-name" style="font-size: 0.88rem;">Flood AI Early Warning</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="hospitals">
+                <span class="pillar-name" style="font-size: 0.88rem;">AI Hospital Triage Grid</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="water">
+                <span class="pillar-name" style="font-size: 0.88rem;">Desalination Balancing</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle" data-system="transport">
+                <span class="pillar-name" style="font-size: 0.88rem;">Autonomous Metro Feeder</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="gov">
+                <span class="pillar-name" style="font-size: 0.88rem;">Digital e-Sevai 2.0</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="energy">
+                <span class="pillar-name" style="font-size: 0.88rem;">Coastal Renewable Grid</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle" data-system="robotics">
+                <span class="pillar-name" style="font-size: 0.88rem;">Oragadam Robotics Hub</span>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <div class="pillar-toggle-card city-switch-toggle active" data-system="infra">
+                <span class="pillar-name" style="font-size: 0.88rem;">Connected Infrastructure</span>
+                <div class="switch-indicator"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blueprint Cartography Canvas -->
+          <div>
+            <div class="engine-telemetry-strip" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.5rem;">
+              <div class="metric-card">
+                <div class="metric-label">Disaster Resilience</div>
+                <div class="metric-value" id="cityResilience">78%</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Urban Flow Rate</div>
+                <div class="metric-value" id="cityEfficiency">80%</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Emergency Intercept</div>
+                <div class="metric-value" id="cityLatency">24ms</div>
+              </div>
+            </div>
+
+            <div class="city-graph-container">
+              <canvas id="cityGraphCanvas"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           4. SECTION: WHAT WOULD YOU PRIORITIZE? (ARCHITECTURAL TRADE-OFFS)
+           ==================================================================== -->
+      <section>
+        <div class="section-header">
+          <div class="section-num">ENGINEERING GOVERNANCE // SYSTEM RESOURCE ALLOCATION</div>
+          <h2 class="section-title">WHAT WOULD YOU PRIORITIZE?</h2>
+          <p class="section-desc">
+            No technical architecture can maximize all dimensions simultaneously. Allocate priority across seven engineering trade-offs to inspect how your decisions shape the city's hardware, latency, and citizen privacy profile.
+          </p>
+        </div>
+
+        <div class="priority-matrix-layout">
+          
+          <!-- 7 Sliders -->
+          <div class="priority-sliders-list">
+            
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">01. Cryptographic Security</span>
+                <span class="priority-val-tag" id="val_security">85%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="security" min="10" max="100" value="85">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">02. Citizen Privacy</span>
+                <span class="priority-val-tag" id="val_privacy">80%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="privacy" min="10" max="100" value="80">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">03. Universal Accessibility</span>
+                <span class="priority-val-tag" id="val_accessibility">75%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="accessibility" min="10" max="100" value="75">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">04. Fault-Tolerant Reliability</span>
+                <span class="priority-val-tag" id="val_reliability">90%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="reliability" min="10" max="100" value="90">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">05. Environmental Sustainability</span>
+                <span class="priority-val-tag" id="val_sustainability">70%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="sustainability" min="10" max="100" value="70">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">06. Human-in-the-Loop Control</span>
+                <span class="priority-val-tag" id="val_humanControl">85%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="humanControl" min="10" max="100" value="85">
+            </div>
+
+            <div class="priority-slider-row">
+              <div class="priority-header-row">
+                <span class="priority-name">07. Digital Inclusion</span>
+                <span class="priority-val-tag" id="val_inclusion">80%</span>
+              </div>
+              <input type="range" class="tech-range-slider priority-range-input" data-priority="inclusion" min="10" max="100" value="80">
+            </div>
+
+          </div>
+
+          <!-- Radar Canvas & Implication -->
+          <div class="priority-radar-container">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: var(--cobalt-primary); margin-bottom: 1rem;">
+              ARCHITECTURAL RESOURCE POLYGON
+            </div>
+
+            <canvas id="radarCanvas"></canvas>
+
+            <div class="radar-implication-box" id="radarImplicationText">
+              <strong>ARCHITECTURAL TRADEOFF IMPLICATION:</strong><br>
+              Prioritizing Reliability (90%) and Security (85%) mandates redundant edge-compute failovers and hardware root-of-trust modules, increasing municipal upfront capital expense while guaranteeing continuous operation during severe tropical depressions.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           5. SECTION: THE NEXT INTERNET STACK (7-TIER ARCHITECTURAL MODEL)
+           ==================================================================== -->
+      <section id="masterStack">
+        <div class="section-header" style="text-align: center;">
+          <div class="section-num">UNIFIED ARCHITECTURAL STACK // 7 TIERS</div>
+          <h2 class="section-title">THE NEXT INTERNET STACK</h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            The complete conceptual technology stack powering ambient cyber-physical systems in 2030. Click any tier to inspect its protocols, boundary enforcement, and failure recovery.
+          </p>
+        </div>
+
+        <div class="master-stack-container">
+          
+          <!-- Layer 07 -->
+          <div class="master-stack-item active">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">07</span>
+                <span class="master-stack-name">TRUST & GOVERNANCE</span>
+              </div>
+              <span class="class-tag class-emerging">POLICIES & AUDIT</span>
+            </div>
+            <div class="master-stack-body">
+              Zero-knowledge cryptographic verification, immutable state auditing, algorithmic liability frameworks, and human-in-the-loop killswitches. Ensures agentic actions comply with civil legal codes and ethics.
+            </div>
+          </div>
+
+          <!-- Layer 06 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">06</span>
+                <span class="master-stack-name">INTELLIGENCE & REASONING</span>
+              </div>
+              <span class="class-tag class-current">NEURAL ENGINES</span>
+            </div>
+            <div class="master-stack-body">
+              Foundation multimodal models, physics-informed neural networks (PINNs), and goal decomposition engines. Translates unstructured camera streams and atmospheric telemetry into actionable tactical plans.
+            </div>
+          </div>
+
+          <!-- Layer 05 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">05</span>
+                <span class="master-stack-name">AUTONOMY & AGENTS</span>
+              </div>
+              <span class="class-tag class-emerging">CLOSED-LOOP GOALS</span>
+            </div>
+            <div class="master-stack-body">
+              Autonomous agent swarms executing multi-step operations (e.g., dynamic stormwater sluice modulation, hospital trauma diversion, drone rescue flights) without requiring manual operator intervention.
+            </div>
+          </div>
+
+          <!-- Layer 04 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">04</span>
+                <span class="master-stack-name">EDGE RUNTIMES & SILICON</span>
+              </div>
+              <span class="class-tag class-current">SUB-5ms INFERENCE</span>
+            </div>
+            <div class="master-stack-body">
+              Localized neuromorphic NPUs and Micro-Datacenters embedded directly inside municipal traffic controllers, desalination pump houses, and electrical substations for deterministic offline fallback.
+            </div>
+          </div>
+
+          <!-- Layer 03 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">03</span>
+                <span class="master-stack-name">DETERMINISTIC CONNECTIVITY</span>
+              </div>
+              <span class="class-tag class-emerging">TIME-SENSITIVE MESH</span>
+            </div>
+            <div class="master-stack-body">
+              Deterministic 6G, Time-Sensitive Networking (TSN), LoRaWAN urban sensor meshes, and satellite direct-to-device uplinks guaranteeing sub-millisecond jitter and uninterrupted telemetry transit.
+            </div>
+          </div>
+
+          <!-- Layer 02 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">02</span>
+                <span class="master-stack-name">SENSORY TELEMETRY</span>
+              </div>
+              <span class="class-tag class-current">ANALOG-TO-DIGITAL</span>
+            </div>
+            <div class="master-stack-body">
+              Distributed LiDAR, ultrasonic reservoir level gauges, acoustic pipeline leak sensors, hyperspectral sorting cameras, and wearable continuous vital monitoring patches.
+            </div>
+          </div>
+
+          <!-- Layer 01 -->
+          <div class="master-stack-item">
+            <div class="master-stack-header">
+              <div style="display: flex; align-items: center;">
+                <span class="master-stack-num">01</span>
+                <span class="master-stack-name">PHYSICAL WORLD & ACTUATION</span>
+              </div>
+              <span class="class-tag class-current">MECHANICAL REALITY</span>
+            </div>
+            <div class="master-stack-body">
+              Sluice gate servos, autonomous electric transit shuttles, water pipe electromagnetic control valves, emergency rescue flotation drop-capsules, and humanoid industrial robotic arms.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- System Equation Box -->
+        <div class="stack-equation-box">
+          AI + IoT + EDGE + ROBOTICS + SPATIAL COMPUTING + DIGITAL TWINS + CYBERSECURITY + HUMAN CONTROL = <strong>THE NEXT INTERNET</strong>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ====================================================================
+         6. FINAL PHILOSOPHICAL SCREEN: WARM IVORY MINIMALIST REVEAL
+         ==================================================================== -->
+    <section class="final-screen-section">
+      <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cobalt-primary); letter-spacing: 0.18em; margin-bottom: 2rem;">
+        // THE FUNDAMENTAL GOVERNANCE QUESTION //
+      </div>
+
+      <h2 class="final-big-question">
+        “IF IT CAN UNDERSTAND,<br>
+        PREDICT AND ACT...<br>
+        <span style="color: var(--cobalt-primary); font-size: 0.9em; display: inline-block; margin-top: 0.5rem;">WHAT SHOULD WE ALLOW IT TO DO?</span>”
+      </h2>
+
+      <div style="width: 80px; height: 2px; background: var(--cobalt-primary); margin: 2rem auto;"></div>
+
+      <div class="final-sub-axiom">
+        THE NEXT INTERNET: UNDERSTAND → ACT → TRUST
+      </div>
+
+      <a href="index.html" class="btn-explore-again" title="Return to Page 01">
+        <span>EXPLORE AGAIN</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Presentation Mode Banner -->
+  <div class="presentation-banner" id="presentationBanner">
+    <div class="banner-title">PRESENTATION MODE ACTIVE</div>
+    <div class="banner-shortcuts">
+      <span><kbd>1</kbd> IT 2030</span>
+      <span><kbd>2</kbd> WITHOUT IT</span>
+      <span><kbd>3</kbd> CHENNAI 2030</span>
+      <span><kbd>P</kbd> EXIT</span>
+    </div>
+  </div>
+
+  <!-- Editorial Footer -->
+  <footer class="global-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">THE NEXT INTERNET</div>
+          <p class="footer-brand-desc">
+            An architectural technology exhibition examining the integration of Information Technology into physical infrastructure, industrial automation, and civic governance.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">SCENARIOS</div>
+          <ul class="footer-links">
+            <li><a href="index.html">01 // IT in 2030</a></li>
+            <li><a href="without-it.html">02 // Without IT</a></li>
+            <li><a href="chennai-2030.html">03 // Chennai 2030</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">CIVIC CASE STUDY</div>
+          <ul class="footer-links">
+            <li><a href="#chennaiZonesList">11 Civic Domains</a></li>
+            <li><a href="#cityGraphCanvas">Urban Topology</a></li>
+            <li><a href="#radarCanvas">Trade-Off Radar</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">SYSTEM SPEC</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="window.appGlobal.togglePresentation(); return false;">Presentation Mode (P)</a></li>
+            <li><a href="index.html">Return to Beginning ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>THE NEXT INTERNET // FUTURE SYSTEMS EXHIBITION</span>
+        <span>CONCEPTUAL URBAN CASE STUDY — CHENNAI 2030</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/page3.js"></script>
+</body>
+</html>

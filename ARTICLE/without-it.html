@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHAT IF IT DISAPPEARED? // THE NEXT INTERNET — Page 02</title>
+  <meta name="description" content="An architectural inquiry into the systemic vulnerabilities and analog fallbacks if Information Technology ceased to operate.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Subtle Architectural Grid Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-radial-gradient"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Editorial Navigation Bar -->
+  <header class="global-header">
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <div class="brand-symbol"></div>
+        <div class="brand-text">
+          <span class="brand-title">THE NEXT INTERNET</span>
+          <span class="brand-meta">FUTURE SYSTEMS EXHIBITION // 2030</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><span class="nav-num">01</span> IT IN 2030</a></li>
+        <li><a href="without-it.html" class="nav-link active"><span class="nav-num">02</span> WITHOUT IT</a></li>
+        <li><a href="chennai-2030.html" class="nav-link"><span class="nav-num">03</span> CHENNAI 2030</a></li>
+      </ul>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <button class="btn-presentation" id="btnPresentation" title="Toggle Judge Presentation Mode (P)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>PRESENTATION</span>
+          <span class="key-hint">P</span>
+        </button>
+
+        <button class="btn-audio" id="btnAudio" title="Toggle Acoustic Feedback"></button>
+
+        <a href="chennai-2030.html" class="btn-explore">
+          <span>CHENNAI 2030</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link"><span class="nav-num">01</span> IT IN 2030</a>
+    <a href="without-it.html" class="nav-link active"><span class="nav-num">02</span> WITHOUT IT</a>
+    <a href="chennai-2030.html" class="nav-link"><span class="nav-num">03</span> CHENNAI 2030</a>
+  </div>
+
+  <!-- Telemetry Strip -->
+  <div class="hud-telemetry">
+    <div class="hud-item">
+      <span class="pulse-dot" id="telemetryPulse"></span>
+      <span id="telemetryStatusText">SOCIETAL AUDIT // REVERSIBLE RESILIENCE TEST</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>DEPENDENCY DEPTH: 9 ARCHITECTURAL TIERS</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>STATE CASCADE: DETERMINISTIC FALLBACK</span>
+    </div>
+    <div class="hud-item">
+      <span>CHAPTER: 02 // STRESS TEST</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- ====================================================================
+           1. HERO & PHYSICAL-LOOKING MASTER TOGGLE
+           ==================================================================== -->
+      <section class="hero-scene" style="min-height: auto; padding: 4.5rem 0 3.5rem; text-align: center;">
+        <span class="label-tag" style="justify-content: center;">02 / CONCEPTUAL STRESS TEST</span>
+        
+        <h1 class="hero-title" style="margin-bottom: 1.5rem;">WHAT IF IT DISAPPEARED?</h1>
+        
+        <p class="hero-statement" style="margin: 0 auto 3rem; border-left: none; text-align: center; max-width: 820px;">
+          “Imagine a world where Information Technology suddenly stops being available. 
+          <strong>Not an apocalyptic blackout — but the cessation of digital signal processing across civil networks.</strong>”
+        </p>
+
+        <!-- Physical Minimalist Toggle -->
+        <div class="it-switch-wrapper">
+          <div class="master-toggle-box" id="masterToggle" title="Click to Toggle Master Information Technology State">
+            <span class="toggle-label-main">INFORMATION TECHNOLOGY:</span>
+            <div class="switch-capsule">
+              <div class="switch-thumb"></div>
+            </div>
+            <span class="switch-status-text" id="toggleStatus">ON</span>
+          </div>
+
+          <!-- 4-Stage Progressive Degradation Indicator -->
+          <div class="degradation-progression">
+            <span class="progression-step active" data-step="CONNECTED">CONNECTED</span>
+            <span class="progression-arrow">→</span>
+            <span class="progression-step" data-step="FRAGMENTED">FRAGMENTED</span>
+            <span class="progression-arrow">→</span>
+            <span class="progression-step" data-step="MANUAL">MANUAL</span>
+            <span class="progression-arrow">→</span>
+            <span class="progression-step" data-step="DISCONNECTED">DISCONNECTED</span>
+          </div>
+
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); margin-top: 1.25rem;">
+            [FLIP SWITCH TO OBSERVE SYSTEMIC BREAKDOWN & ANALOG FALLBACK PHENOMENA]
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           2. 11-SECTOR SOCIETAL DEPENDENCY MATRIX
+           ==================================================================== -->
+      <section style="margin-top: 2.5rem;">
+        <div class="section-header">
+          <div class="section-num">CIVIL INFRASTRUCTURE AUDIT // 11 SOCIETAL PILLARS</div>
+          <h2 class="section-title">THE SOCIETAL DEPENDENCY MATRIX</h2>
+          <p class="section-desc">
+            A sober engineering analysis of systemic fragility. When digital networks are unavailable, society does not immediately collapse; rather, it rapidly decelerates into manual paperwork, cash rationing, and severe information latency.
+          </p>
+        </div>
+
+        <div class="societal-grid" id="societalGrid">
+
+          <!-- 1. Digital Payments -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Digital Payments</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Instant UPI, ISO 20022 real-time settlement, contactless NFC tokens, and algorithmic fraud detection handling 450M+ daily digital micro-transactions.
+              </p>
+              <div class="sector-meta">
+                <span>THROUGHPUT: 18,400 TPS</span>
+                <span>LATENCY: 85ms</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Electronic point-of-sale terminals go dead. Societies rapidly deplete physical paper banknote reserves, causing immediate retail rationing, cash queues, and merchant credit ledgers.
+              </p>
+              <div class="sector-meta">
+                <span>VELOCITY: MANUAL CASH</span>
+                <span>STATE: RATIONED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Online Banking -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Online Banking</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Distributed core banking engines, synchronized automated clearinghouses (ACH), and cryptographic double-entry ledgers verifying international wire balances.
+              </p>
+              <div class="sector-meta">
+                <span>SYNC: DISTRIBUTED RAFT</span>
+                <span>UPTIME: 99.999%</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Inter-bank clearing freezes. Branch tellers revert to paper passbooks and carbon-copy ledger entries. Multi-week reconciliation backlogs paralyze commercial credit.
+              </p>
+              <div class="sector-meta">
+                <span>SETTLEMENT: MULTI-WEEK</span>
+                <span>STATE: DESYNCHRONIZED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. GPS & Navigation -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">GPS & Navigation</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                GNSS satellite constellation trilateration providing sub-meter spatial coordinates, vehicle telematics, maritime AIS tracking, and precision atomic clock timestamps.
+              </p>
+              <div class="sector-meta">
+                <span>ACCURACY: ±0.3m</span>
+                <span>TIME-SYNC: 10ns</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Satellite ephemeris reception severed. Aviation and maritime transit revert to physical nautical charts, ground-based radio beacons (VOR/DME), and celestial sextants.
+              </p>
+              <div class="sector-meta">
+                <span>PRECISION: VISUAL LANDMARK</span>
+                <span>STATE: DEGRADED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Cloud Computing -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Cloud Computing</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Elastic multi-tenant virtual machines, distributed object storage buckets, serverless edge functions, and containerized microservices scaling automatically.
+              </p>
+              <div class="sector-meta">
+                <span>NODES: 32M+ VIRTUAL</span>
+                <span>STORAGE: EXABYTES</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Multi-tenant clusters unreachable. Organizations lose remote SaaS applications, forcing a retreat to isolated local magnetic tape archives and air-gapped disks.
+              </p>
+              <div class="sector-meta">
+                <span>COMPUTE: STANDALONE HARDWARE</span>
+                <span>STATE: ISOLATED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Online Education -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Online Education</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                High-definition WebRTC video lectures, digital learning management systems (LMS), interactive browser coding sandboxes, and automated grading pipelines.
+              </p>
+              <div class="sector-meta">
+                <span>REACH: GLOBAL</span>
+                <span>MATERIALS: REAL-TIME</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Digital class portals dissolve. Education returns exclusively to physical classrooms, chalkboards, and printed textbooks, widening geographic knowledge disparities.
+              </p>
+              <div class="sector-meta">
+                <span>MEDIUM: PRINT TEXTBOOKS</span>
+                <span>STATE: LOCALIZED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Telemedicine & Health -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Telemedicine & Health IT</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Centralized Electronic Health Records (EHR), AI-assisted radiological MRI scan triage, robotic remote surgery, and real-time biometric ambulance telemetry.
+              </p>
+              <div class="sector-meta">
+                <span>EHR QUERY: 12ms</span>
+                <span>DIAGNOSTICS: AI ACCELERATED</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Remote diagnostic telemetry halts. Doctors rely strictly on handwritten physical medical charts, paper prescription slips, and stethoscope auscultation without digital history.
+              </p>
+              <div class="sector-meta">
+                <span>TRIAGE: PHYSICAL IN-PERSON</span>
+                <span>STATE: MANUAL SLOWDOWN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. E-Commerce & Fulfillment -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">E-Commerce Logistics</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Algorithmic just-in-time inventory routing, autonomous automated guided vehicle (AGV) warehouse picking, and real-time package delivery tracking.
+              </p>
+              <div class="sector-meta">
+                <span>SUPPLY CYCLE: 24-48 HRS</span>
+                <span>INVENTORY: DYNAMIC</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Just-in-time inventory collapses. Warehouses can no longer determine freight dispatch, causing grocery stockouts and relying on physical paper manifests.
+              </p>
+              <div class="sector-meta">
+                <span>ROUTING: TELEPHONE & TELEGRAPH</span>
+                <span>STATE: SUPPLY SHOCK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Digital Communication -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Digital Communication</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                End-to-end encrypted packet-switched messaging, high-bandwidth video conferencing, VoIP trunk lines, and global email routing protocols (SMTP/IMAP).
+              </p>
+              <div class="sector-meta">
+                <span>MESSAGES: 350B+ DAILY</span>
+                <span>ROUTING: ANYCAST IP</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Instant messaging and email vanish. Long-distance communication falls back to analog copper landlines, AM/FM radio news broadcasts, and postal courier pouches.
+              </p>
+              <div class="sector-meta">
+                <span>TRANSIT: COPPER & COURIER</span>
+                <span>STATE: ASYNCHRONOUS LAG</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Smart Transport Systems -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Smart Transport & Signals</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Adaptive real-time traffic signal optimization, automated rail block signaling, subway headway dispatching, and dynamically priced toll plazas.
+              </p>
+              <div class="sector-meta">
+                <span>FLOW EFFICIENCY: +38%</span>
+                <span>DISPATCH: AUTOMATED</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Traffic lights default to fixed mechanical timer relays. Traffic police must physically direct major intersections, triggering massive gridlock.
+              </p>
+              <div class="sector-meta">
+                <span>SIGNALS: FIXED RELAYS</span>
+                <span>STATE: CONGESTED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Industrial SCADA -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Industrial Automation</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Supervisory Control and Data Acquisition (SCADA), Programmable Logic Controllers (PLCs), high-speed industrial Ethernet, and predictive maintenance.
+              </p>
+              <div class="sector-meta">
+                <span>CYCLE ACCURACY: 1ms</span>
+                <span>MONITORING: 24/7 IOT</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Networked SCADA loops fail. Plants switch to local mechanical bypass valves, analog pressure gauges, and manual operator stations with heavily reduced capacity.
+              </p>
+              <div class="sector-meta">
+                <span>CONTROL: MANUAL PNEUMATIC</span>
+                <span>STATE: REDUCED OUTPUT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Emergency Dispatch -->
+          <div class="sector-card">
+            <div class="sector-header">
+              <span class="sector-name">Emergency Dispatch</span>
+              <span class="sector-status-pill">Active</span>
+            </div>
+            <div class="sector-online-view">
+              <p class="sector-desc">
+                Computer-Aided Dispatch (CAD), caller cell-tower triangulation, automated closest-unit ambulance routing, and integrated digital hospital status dashboards.
+              </p>
+              <div class="sector-meta">
+                <span>DISPATCH TIME: 45 SEC</span>
+                <span>TRIAGE: GPS AIDED</span>
+              </div>
+            </div>
+            <div class="sector-offline-view">
+              <p class="sector-desc" style="color: var(--crimson-crit);">
+                <strong>ANALOG FALLBACK:</strong> Automated CAD triangulation ceases. Dispatchers manually write addresses on paper slips, consult physical wall atlases, and broadcast calls over analog VHF radio.
+              </p>
+              <div class="sector-meta">
+                <span>RESPONSE: 12-25 MIN</span>
+                <span>STATE: BLIND DISPATCH</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           3. TECHNICAL SECTION: "HOW DEEP IS IT?" (9-LAYER BLUEPRINT)
+           ==================================================================== -->
+      <section>
+        <div class="section-header">
+          <div class="section-num">ARCHITECTURAL SYSTEM AUDIT // 9 TIERS</div>
+          <h2 class="section-title">HOW DEEP IS IT?</h2>
+          <p class="section-desc">
+            Hover over any tier in this architectural dependency stack. Upstream technical requirements highlight in electric cobalt, while downstream physical layers indicate their vulnerability to digital disconnection.
+          </p>
+        </div>
+
+        <div class="dependency-stack" id="dependencyStack">
+          
+          <!-- Layer 09 -->
+          <div class="stack-layer-card" data-layer="9">
+            <span class="layer-index">L-09</span>
+            <span class="layer-title">Human Decisions</span>
+            <span class="layer-role">Diagnostic triage, capital allocation, emergency governance</span>
+            <span class="layer-vulnerability">IT DEPTH: 82%</span>
+          </div>
+
+          <!-- Layer 08 -->
+          <div class="stack-layer-card" data-layer="8">
+            <span class="layer-index">L-08</span>
+            <span class="layer-title">Digital Services</span>
+            <span class="layer-role">Payment APIs, EHR portals, dispatch queues, booking engines</span>
+            <span class="layer-vulnerability">IT DEPTH: 100%</span>
+          </div>
+
+          <!-- Layer 07 -->
+          <div class="stack-layer-card" data-layer="7">
+            <span class="layer-index">L-07</span>
+            <span class="layer-title">Artificial Intelligence</span>
+            <span class="layer-role">Neural inference, anomaly detectors, spatial computer vision</span>
+            <span class="layer-vulnerability">IT DEPTH: 100%</span>
+          </div>
+
+          <!-- Layer 06 -->
+          <div class="stack-layer-card" data-layer="6">
+            <span class="layer-index">L-06</span>
+            <span class="layer-title">Data & State</span>
+            <span class="layer-role">Distributed consensus databases, citizen identity, ledgers</span>
+            <span class="layer-vulnerability">IT DEPTH: 98%</span>
+          </div>
+
+          <!-- Layer 05 -->
+          <div class="stack-layer-card" data-layer="5">
+            <span class="layer-index">L-05</span>
+            <span class="layer-title">Software Runtimes</span>
+            <span class="layer-role">Operating system kernels, hypervisors, container engines</span>
+            <span class="layer-vulnerability">IT DEPTH: 100%</span>
+          </div>
+
+          <!-- Layer 04 -->
+          <div class="stack-layer-card" data-layer="4">
+            <span class="layer-index">L-04</span>
+            <span class="layer-title">Computation</span>
+            <span class="layer-role">CPUs, GPUs, TPUs, memory controllers, cryptographic ASICs</span>
+            <span class="layer-vulnerability">IT DEPTH: 100%</span>
+          </div>
+
+          <!-- Layer 03 -->
+          <div class="stack-layer-card" data-layer="3">
+            <span class="layer-index">L-03</span>
+            <span class="layer-title">Networks</span>
+            <span class="layer-role">Subsea fiber cables, BGP routers, 5G/6G towers, satellite links</span>
+            <span class="layer-vulnerability">IT DEPTH: 95%</span>
+          </div>
+
+          <!-- Layer 02 -->
+          <div class="stack-layer-card" data-layer="2">
+            <span class="layer-index">L-02</span>
+            <span class="layer-title">Sensors</span>
+            <span class="layer-role">LiDAR, pressure transducers, cameras, optical encoders</span>
+            <span class="layer-vulnerability">IT DEPTH: 75%</span>
+          </div>
+
+          <!-- Layer 01 -->
+          <div class="stack-layer-card" data-layer="1">
+            <span class="layer-index">L-01</span>
+            <span class="layer-title">Physical World</span>
+            <span class="layer-role">Water pipes, concrete bridges, asphalt roads, electrical wires</span>
+            <span class="layer-vulnerability">IT DEPTH: 25%</span>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           4. SECTION: THE HIDDEN INFRASTRUCTURE (ARCHITECTURAL BLUEPRINT)
+           ==================================================================== -->
+      <section>
+        <div class="section-header">
+          <div class="section-num">INVISIBLE BEDROCK // 6 FOUNDATIONAL PILLARS</div>
+          <h2 class="section-title">THE HIDDEN INFRASTRUCTURE</h2>
+          <p class="section-desc">
+            The invisible physical architecture that sustains daily civilization. Click each infrastructure archetype to review its real operational design and single-point-of-failure vulnerabilities.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start;">
+          
+          <!-- Nodes List -->
+          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+            
+            <div class="infra-card pillar-toggle-card active" data-infra="subsea" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">Subsea Fiber Optic Arteries</span>
+                <span class="pillar-role">550+ Undersea Cables Carrying 99% of Transoceanic Data</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+            <div class="infra-card pillar-toggle-card" data-infra="datacenters" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">Hyperscale Data Centers</span>
+                <span class="pillar-role">Tier-IV Redundant Compute Halls & 100MW Power Grids</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+            <div class="infra-card pillar-toggle-card" data-infra="bgp" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">BGP Routing & Root DNS</span>
+                <span class="pillar-role">Autonomous Systems (AS) Dynamic Internet Routing Mesh</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+            <div class="infra-card pillar-toggle-card" data-infra="databases" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">Distributed Consensus Databases</span>
+                <span class="pillar-role">Raft & Paxos Atomic State Replication Over Fiber</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+            <div class="infra-card pillar-toggle-card" data-infra="hsm" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">Hardware Security Modules (HSM)</span>
+                <span class="pillar-role">Physical Cryptographic Cores & Root Keys of Trust</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+            <div class="infra-card pillar-toggle-card" data-infra="inference" style="cursor: pointer;">
+              <div class="pillar-info">
+                <span class="pillar-name">AI Inference & HBM Clusters</span>
+                <span class="pillar-role">Liquid-Cooled NVLink Clusters Executing Trillion-Parameter Passes</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: var(--cobalt-primary);">INSPECT →</span>
+            </div>
+
+          </div>
+
+          <!-- Detail View -->
+          <div id="infraDetailView">
+            <div class="infra-detail-box" style="background: rgba(18,16,38,0.92); border: 1px solid var(--border-dark); padding: 2rem;">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: var(--cobalt-primary); margin-bottom: 0.5rem;">SYS.INFRASTRUCTURE // ARCHITECTURAL DOSSIER</div>
+              <h3 style="font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; margin-bottom: 0.25rem;">Subsea Fiber-Optic Arteries</h3>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: #0E9F6E; margin-bottom: 1.5rem;">550+ Active Cables // 1.4M+ Kilometers // 99.4% Global Internet Traffic</div>
+              
+              <div style="margin-bottom: 1.5rem;">
+                <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; margin-bottom: 0.4rem;">Operational Architecture</div>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65;">
+                  Transoceanic armored glass cables carrying DWDM (Dense Wavelength Division Multiplexing) laser signals powered by high-voltage repeaters every 70km on the ocean floor.
+                </p>
+              </div>
+
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; color: var(--orange-secondary); text-transform: uppercase; margin-bottom: 0.4rem;">Critical Failure Vulnerability</div>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+                  Physical ship anchor drags, seismic undersea landslides, and single points of failure at coastal landing stations without inland route diversity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Presentation Mode Banner -->
+  <div class="presentation-banner" id="presentationBanner">
+    <div class="banner-title">PRESENTATION MODE ACTIVE</div>
+    <div class="banner-shortcuts">
+      <span><kbd>1</kbd> IT 2030</span>
+      <span><kbd>2</kbd> WITHOUT IT</span>
+      <span><kbd>3</kbd> CHENNAI 2030</span>
+      <span><kbd>P</kbd> EXIT</span>
+    </div>
+  </div>
+
+  <!-- Editorial Footer -->
+  <footer class="global-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">THE NEXT INTERNET</div>
+          <p class="footer-brand-desc">
+            An architectural technology exhibition examining the integration of Information Technology into physical infrastructure, industrial automation, and civic governance.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">SCENARIOS</div>
+          <ul class="footer-links">
+            <li><a href="index.html">01 // IT in 2030</a></li>
+            <li><a href="without-it.html">02 // Without IT</a></li>
+            <li><a href="chennai-2030.html">03 // Chennai 2030</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">AUDIT CONTROLS</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="document.getElementById('masterToggle').click(); return false;">Flip IT ON/OFF Switch</a></li>
+            <li><a href="#dependencyStack">9-Tier Dependency Stack</a></li>
+            <li><a href="#infraDetailView">Subsea Infrastructure Dossier</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">SYSTEM SPEC</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="window.appGlobal.togglePresentation(); return false;">Presentation Mode (P)</a></li>
+            <li><a href="chennai-2030.html">Chennai 2030 Case Study →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>THE NEXT INTERNET // RESILIENCE AUDIT SCENARIO</span>
+        <span>CONCEPTUAL ANALYSIS OF SOCIETAL DIGITAL DEPENDENCIES</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/page2.js"></script>
+</body>
+</html>

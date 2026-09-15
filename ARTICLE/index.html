@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE NEXT INTERNET — IT IN 2030 // Technology Exhibition</title>
+  <meta name="description" content="An architectural inquiry into what happens when Information Technology becomes deeply integrated into everything.">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Subtle Architectural Grid Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-radial-gradient"></div>
+
+  <!-- Custom Architectural Crosshair Cursor (Desktop) -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+  <!-- Clean Editorial Navigation Bar -->
+  <header class="global-header">
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <div class="brand-symbol"></div>
+        <div class="brand-text">
+          <span class="brand-title">THE NEXT INTERNET</span>
+          <span class="brand-meta">FUTURE SYSTEMS EXHIBITION // 2030</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active"><span class="nav-num">01</span> IT IN 2030</a></li>
+        <li><a href="without-it.html" class="nav-link"><span class="nav-num">02</span> WITHOUT IT</a></li>
+        <li><a href="chennai-2030.html" class="nav-link"><span class="nav-num">03</span> CHENNAI 2030</a></li>
+      </ul>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <button class="btn-presentation" id="btnPresentation" title="Toggle Judge Presentation Mode (P)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>PRESENTATION</span>
+          <span class="key-hint">P</span>
+        </button>
+
+        <button class="btn-audio" id="btnAudio" title="Toggle Acoustic Feedback"></button>
+
+        <a href="without-it.html" class="btn-explore">
+          <span>EXPLORE</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link active"><span class="nav-num">01</span> IT IN 2030</a>
+    <a href="without-it.html" class="nav-link"><span class="nav-num">02</span> WITHOUT IT</a>
+    <a href="chennai-2030.html" class="nav-link"><span class="nav-num">03</span> CHENNAI 2030</a>
+  </div>
+
+  <!-- Telemetry Sub-Strip -->
+  <div class="hud-telemetry">
+    <div class="hud-item">
+      <span class="pulse-dot"></span>
+      <span>SYSTEM SPEC: 2030 AMBIENT RUNTIME</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>COMPUTE TOPOLOGY: DETERMINISTIC MESH</span>
+    </div>
+    <div class="hud-item hide-mobile">
+      <span>LATENCY TARGET: &lt; 4.5ms LOCAL</span>
+    </div>
+    <div class="hud-item">
+      <span>CHAPTER: 01 // FOUNDATION</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- ====================================================================
+           1. HERO SECTION: EDITORIAL SPLIT COMPOSITION
+           ==================================================================== -->
+      <section class="hero-scene">
+        <div class="hero-layout">
+          
+          <!-- Left: Editorial Typography & Statement -->
+          <div class="hero-text-block">
+            <span class="hero-editorial-badge">01 / FUTURE SYSTEMS</span>
+            
+            <div class="hero-title-group">
+              <span class="hero-title-line">IT</span>
+              <span class="hero-title-line">IN</span>
+              <span class="hero-title-oversized">2030</span>
+            </div>
+            
+            <p class="hero-editorial-lead">
+              “When technology stops being something we use — 
+              <strong>and becomes something the world continuously runs on.</strong>”
+            </p>
+
+            <div class="hero-annotation-bar">
+              <span>FROM INFORMATION</span>
+              <span style="color: var(--cobalt-primary);">→</span>
+              <span>TO INTELLIGENCE</span>
+              <span style="color: var(--orange-secondary);">→</span>
+              <span>TO ACTION</span>
+            </div>
+          </div>
+
+          <!-- Right: Architectural Vector Visualization -->
+          <div class="hero-visual-card">
+            <div class="card-header-bar">
+              <span>FIGURE 1.0 // COMPUTATIONAL TRANSLATION</span>
+              <span>WEB → AI → AGENTS → WORLD</span>
+            </div>
+
+            <div class="canvas-container">
+              <canvas id="heroCanvas"></canvas>
+            </div>
+
+            <div class="hero-scrubber">
+              <div class="scrubber-labels">
+                <span class="active">WEB</span>
+                <span>AI</span>
+                <span>AGENTS</span>
+                <span>WORLD</span>
+              </div>
+              <input type="range" class="tech-range-slider" id="heroScrubber" min="0" max="100" value="0">
+              <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-muted); margin-top: 0.25rem;">
+                <span>01. STATIC DOCUMENT</span>
+                <span>02. REASONING ENGINE</span>
+                <span>03. TASK ORCHESTRATION</span>
+                <span>04. EMBODIED REALITY</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           2. SECTION: THE EVOLUTION OF IT (MUSEUM EXHIBITION TIMELINE)
+           ==================================================================== -->
+      <section class="evolution-section">
+        <div class="section-header">
+          <div class="section-num">CHRONOLOGY // ARCHITECTURAL PARADIGM SHIFT</div>
+          <h2 class="section-title">THE EVOLUTION OF IT</h2>
+          <p class="section-desc">
+            Information Technology has progressed from static document indexing to active autonomous coordination with physical matter. Click any epoch to inspect its foundational primitives.
+          </p>
+        </div>
+
+        <div class="timeline-track">
+          
+          <!-- Node 1: Web 1.0 -->
+          <div class="timeline-node active">
+            <div class="node-year-huge">1990s</div>
+            <div class="node-era-tag">ERA 01 // 1991 — 2004</div>
+            <h3 class="node-title">WEB 1.0</h3>
+            <span class="node-verb">READ</span>
+            <p class="node-desc">
+              Static document publishing. Specialized institutions hosted HTML pages on centralized HTTP daemons, browsed by passive consumers over dial-up copper.
+            </p>
+            <div class="node-tech-list">
+              HTTP/1.0 • Static HTML • Apache • Dial-Up
+            </div>
+          </div>
+
+          <!-- Node 2: Web 2.0 -->
+          <div class="timeline-node">
+            <div class="node-year-huge">2000s</div>
+            <div class="node-era-tag">ERA 02 // 2005 — 2022</div>
+            <h3 class="node-title">WEB 2.0</h3>
+            <span class="node-verb">READ + WRITE</span>
+            <p class="node-desc">
+              Social platforms and centralized hyperscale clouds. Users authored digital content, driving real-time web applications, smartphones, and global REST services.
+            </p>
+            <div class="node-tech-list">
+              Cloud VMs • REST APIs • Smart Devices • 4G
+            </div>
+          </div>
+
+          <!-- Node 3: AI Web -->
+          <div class="timeline-node">
+            <div class="node-year-huge">2020s</div>
+            <div class="node-era-tag">ERA 03 // 2023 — 2025</div>
+            <h3 class="node-title">AI WEB</h3>
+            <span class="node-verb">UNDERSTAND</span>
+            <p class="node-desc">
+              Foundational neural cognition. Large multimodal transformer architectures parse unstructured speech, image, and code tokens with deep contextual reasoning.
+            </p>
+            <div class="node-tech-list">
+              Transformers • HBM Silicon • Vector DBs • RAG
+            </div>
+          </div>
+
+          <!-- Node 4: Agentic Web -->
+          <div class="timeline-node">
+            <div class="node-year-huge">2026–29</div>
+            <div class="node-era-tag">ERA 04 // 2026 — 2029</div>
+            <h3 class="node-title">AGENTIC WEB</h3>
+            <span class="node-verb">UNDERSTAND + ACT</span>
+            <p class="node-desc">
+              Goal-directed execution networks. Autonomous agents decompose complex objectives, coordinate APIs via MCP, self-correct errors, and negotiate within peer swarms.
+            </p>
+            <div class="node-tech-list">
+              MCP Protocol • Tool Chains • Swarm Consensus
+            </div>
+          </div>
+
+          <!-- Node 5: Future IT -->
+          <div class="timeline-node">
+            <div class="node-year-huge">2030+</div>
+            <div class="node-era-tag">ERA 05 // 2030 BEYOND</div>
+            <h3 class="node-title">FUTURE IT</h3>
+            <span class="node-verb">INTERACT WITH THE WORLD</span>
+            <p class="node-desc">
+              Ambient physical integration. Deterministic intelligence executes on localized edge silicon, directly modulating power grids, traffic, water sluices, and robotics.
+            </p>
+            <div class="node-tech-list">
+              Embodied AI • Neuromorphic Edge • 6G TSN
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           3. SECTION: WHAT COULD IT LOOK LIKE IN 2030? (CONSTELLATION MAP)
+           ==================================================================== -->
+      <section class="constellation-section">
+        <div class="section-header">
+          <div class="section-num">SYSTEM TOPOLOGY // 12 INTERCONNECTED DOMAINS</div>
+          <h2 class="section-title">WHAT COULD IT LOOK LIKE IN 2030?</h2>
+          <p class="section-desc">
+            An architectural map centered around the 2030 IT core. Click any technology vertex to open its engineering dossier, maturity classification, and standardized protocols.
+          </p>
+        </div>
+
+        <div class="constellation-wrapper">
+          <!-- Filter Controls -->
+          <div class="constellation-controls">
+            <div class="filter-pills">
+              <button class="filter-btn active" data-filter="ALL">ALL</button>
+              <button class="filter-btn" data-filter="CURRENT">CURRENT</button>
+              <button class="filter-btn" data-filter="EMERGING">EMERGING</button>
+              <button class="filter-btn" data-filter="RESEARCH">RESEARCH</button>
+              <button class="filter-btn" data-filter="FUTURE">FUTURE</button>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--cobalt-primary);">
+              ARCHITECTURAL MAPPING // 12 NODES LINKED
+            </div>
+          </div>
+
+          <canvas id="constellationCanvas"></canvas>
+
+          <div class="constellation-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>Hover to inspect interconnections // Click node for architectural specification</span>
+          </div>
+
+          <!-- Slide-out Technical Dossier Drawer -->
+          <div class="tech-dossier-drawer" id="techDossierDrawer">
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close dossier">✕</button>
+            
+            <div class="dossier-id" id="dossierId">SYS.TECH // SPECIFICATION</div>
+            <h3 class="dossier-title" id="dossierTitle">Technology</h3>
+            
+            <div class="dossier-maturity">
+              <span class="class-tag class-emerging" id="dossierMaturity">EMERGING</span>
+            </div>
+
+            <div style="font-family: var(--font-body); font-style: italic; font-size: 0.95rem; color: var(--cobalt-primary); margin-bottom: 1.25rem;" id="dossierTagline">
+              Tagline
+            </div>
+
+            <p class="dossier-desc" id="dossierDesc">
+              Technical description.
+            </p>
+
+            <div class="dossier-block">
+              <div class="dossier-block-title">Architectural Pipeline</div>
+              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-primary); line-height: 1.6;" id="dossierArch">
+                Pipeline
+              </div>
+            </div>
+
+            <div class="dossier-block">
+              <div class="dossier-block-title">Standardized Protocols & Specifications</div>
+              <div class="dossier-protocols" id="dossierProtocols"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="tech-divider"></div>
+
+      <!-- ====================================================================
+           4. INTERACTIVE FEATURE: "BUILD YOUR 2030" SYSTEM ARCHITECTURE
+           ==================================================================== -->
+      <section class="engine-section">
+        <div class="section-header">
+          <div class="section-num">INTEGRATION LAB // CLOSED-LOOP DEMONSTRATION</div>
+          <h2 class="section-title">BUILD YOUR 2030 SYSTEM</h2>
+          <p class="section-desc">
+            Activate core technologies on the left. Observe how the central system architecture establishes real-time data flows from sensory input to physical actuation, computing live latency and autonomy tiers.
+          </p>
+        </div>
+
+        <div class="engine-workspace">
+          
+          <!-- Left: Pillar Toggles -->
+          <div class="engine-sidebar">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-medium); padding-bottom: 0.75rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-primary); letter-spacing: 0.08em;">ACTIVATE TECHNOLOGY</span>
+              <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--cobalt-primary);">TOGGLE PILLARS</span>
+            </div>
+
+            <div class="pillar-toggles-list">
+              <!-- Pillar 1: AI -->
+              <div class="pillar-toggle-card active" data-pillar="ai">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ AI ] Artificial Intelligence</span>
+                  <span class="pillar-role">Cognition & Multi-Agent Planning</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <!-- Pillar 2: IoT -->
+              <div class="pillar-toggle-card active" data-pillar="iot">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ IoT ] Internet of Things</span>
+                  <span class="pillar-role">Ambient Sensor Ingestion Grid</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <!-- Pillar 3: Edge Computing -->
+              <div class="pillar-toggle-card" data-pillar="edge">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ EDGE ] Edge Computing</span>
+                  <span class="pillar-role">Sub-5ms Local Deterministic Silicon</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <!-- Pillar 4: Robotics -->
+              <div class="pillar-toggle-card" data-pillar="robotics">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ ROBOTICS ] Embodied Actuation</span>
+                  <span class="pillar-role">Torque, Servos & Solenoid Control</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <!-- Pillar 5: Spatial Computing -->
+              <div class="pillar-toggle-card" data-pillar="spatial">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ SPATIAL ] Spatial Computing</span>
+                  <span class="pillar-role">3D Environment Coordinate Anchors</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+
+              <!-- Pillar 6: Digital Twins -->
+              <div class="pillar-toggle-card" data-pillar="twins">
+                <div class="pillar-info">
+                  <span class="pillar-name">[ TWINS ] Digital Twins</span>
+                  <span class="pillar-role">Predictive Physics Simulation Clones</span>
+                </div>
+                <div class="switch-indicator"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: System Architecture Visualization -->
+          <div class="engine-diagram-container">
+            
+            <!-- Telemetry Strip -->
+            <div class="engine-telemetry-strip">
+              <div class="metric-card">
+                <div class="metric-label">Compute Latency</div>
+                <div class="metric-value" id="metricLatency">40<span class="metric-unit">ms</span></div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Autonomy Tier</div>
+                <div class="metric-value" id="metricAutonomy" style="font-size: 1.15rem;">L2 (PARTIAL)</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Energy Efficiency</div>
+                <div class="metric-value" id="metricEfficiency">32.8<span class="metric-unit">TOPS/W</span></div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Data Bus Rate</div>
+                <div class="metric-value" id="metricThroughput">22.1<span class="metric-unit">GB/s</span></div>
+              </div>
+            </div>
+
+            <!-- 5-Stage Architecture Pipeline -->
+            <div class="dataflow-pipeline">
+              
+              <!-- 1. Sense -->
+              <div class="pipeline-node" id="pipeSense">
+                <div class="node-icon-box">01</div>
+                <div class="pipeline-step-title">SENSE</div>
+                <div class="pipeline-step-desc">Sensors & Cameras</div>
+              </div>
+
+              <div class="pipeline-arrow" id="arrow1"></div>
+
+              <!-- 2. Understand -->
+              <div class="pipeline-node" id="pipeUnderstand">
+                <div class="node-icon-box">02</div>
+                <div class="pipeline-step-title">UNDERSTAND</div>
+                <div class="pipeline-step-desc">Latent Space Embeddings</div>
+              </div>
+
+              <div class="pipeline-arrow" id="arrow2"></div>
+
+              <!-- 3. Predict -->
+              <div class="pipeline-node" id="pipePredict">
+                <div class="node-icon-box">03</div>
+                <div class="pipeline-step-title">PREDICT</div>
+                <div class="pipeline-step-desc">Physics Simulation</div>
+              </div>
+
+              <div class="pipeline-arrow" id="arrow3"></div>
+
+              <!-- 4. Decide -->
+              <div class="pipeline-node" id="pipeDecide">
+                <div class="node-icon-box">04</div>
+                <div class="pipeline-step-title">DECIDE</div>
+                <div class="pipeline-step-desc">Deterministic Policy Gate</div>
+              </div>
+
+              <div class="pipeline-arrow" id="arrow4"></div>
+
+              <!-- 5. Act -->
+              <div class="pipeline-node" id="pipeAct">
+                <div class="node-icon-box">05</div>
+                <div class="pipeline-step-title">ACT</div>
+                <div class="pipeline-step-desc">Physical Actuators</div>
+              </div>
+
+            </div>
+
+            <!-- Console Log -->
+            <div class="engine-terminal-feed" id="terminalFeed">
+              <div class="feed-line"><span class="feed-time">[SYS.INIT]</span> <span class="feed-msg">ARCHITECTURAL BUS SYNCHRONIZED. SYSTEM AUDIT READY.</span></div>
+              <div class="feed-line"><span class="feed-time">[SYS.LOAD]</span> <span class="feed-msg">ALLOCATED PILLAR: [AI] // COGNITION CLUSTERS ONLINE</span></div>
+              <div class="feed-line"><span class="feed-time">[SYS.LOAD]</span> <span class="feed-msg">ALLOCATED PILLAR: [IOT] // AMBIENT TELEMETRY LINKED</span></div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Presentation Mode HUD Banner -->
+  <div class="presentation-banner" id="presentationBanner">
+    <div class="banner-title">PRESENTATION MODE ACTIVE</div>
+    <div class="banner-shortcuts">
+      <span><kbd>1</kbd> IT 2030</span>
+      <span><kbd>2</kbd> WITHOUT IT</span>
+      <span><kbd>3</kbd> CHENNAI 2030</span>
+      <span><kbd>P</kbd> EXIT</span>
+    </div>
+  </div>
+
+  <!-- Editorial Footer -->
+  <footer class="global-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">THE NEXT INTERNET</div>
+          <p class="footer-brand-desc">
+            An architectural technology exhibition examining the integration of Information Technology into physical infrastructure, industrial automation, and civic governance.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">SCENARIOS</div>
+          <ul class="footer-links">
+            <li><a href="index.html">01 // IT in 2030</a></li>
+            <li><a href="without-it.html">02 // Without IT</a></li>
+            <li><a href="chennai-2030.html">03 // Chennai 2030</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">ARCHITECTURE</div>
+          <ul class="footer-links">
+            <li><a href="index.html#constellationCanvas">12-Node Map</a></li>
+            <li><a href="index.html#pipeSense">5-Stage Pipeline</a></li>
+            <li><a href="chennai-2030.html#masterStack">7-Layer Stack</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">SYSTEM SPEC</div>
+          <ul class="footer-links">
+            <li><a href="#" onclick="window.appGlobal.togglePresentation(); return false;">Presentation Mode (P)</a></li>
+            <li><a href="without-it.html">Resilience Stress Test →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>THE NEXT INTERNET // FUTURE SYSTEMS EXHIBITION</span>
+        <span>ARCHITECTURAL SPECIFICATION & RIGOROUS TECHNICAL MODELING</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/page1.js"></script>
+</body>
+</html>
